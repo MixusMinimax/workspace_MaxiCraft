@@ -94,7 +94,6 @@ public class CameraFrame extends Application {
 				}
 			}
 		}
-
 	}
 
 	@Override
