@@ -33,15 +33,17 @@ public class MC extends Application {
 		scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
 			@Override
 			public void handle(KeyEvent event) {
-				if(!keys.contains(event.toString())) {
-					keys.add(event.toString());
+				if(!keys.contains(event.getCode().toString())) {
+					keys.add(event.getCode().toString());
 				}
+				printStrings(keys);
 			}
 		});
 		scene.setOnKeyReleased(new EventHandler<KeyEvent>() {
 			@Override
 			public void handle(KeyEvent event) {
-				keys.remove(event.toString());
+				keys.remove(event.getCode().toString());
+				printStrings(keys);
 			}
 		});
 		
@@ -51,5 +53,9 @@ public class MC extends Application {
 
 	public static void main(String[] args) {
 		launch(args);
+	}
+	
+	private void printStrings(ArrayList<String> strings) {
+		System.out.println(strings);
 	}
 }
