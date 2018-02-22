@@ -21,6 +21,7 @@ public class Runner extends Application {
 
     private Image heroImage;
     private Node  hero;
+    //
 
     boolean running, goNorth, goSouth, goEast, goWest;
 
